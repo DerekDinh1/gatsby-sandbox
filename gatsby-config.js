@@ -7,6 +7,14 @@ module.exports = {
     description: 'Created by Derek Dinh - © 2021'
   },
   plugins: [
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
+    'gatsby-transformer-remark'
   ]
 }
